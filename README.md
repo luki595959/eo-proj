@@ -13,7 +13,7 @@
 # 2. to do:
 1. aukcie:
     - posled 15 popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
-2. statistky:
+2. statistky (Lenka):
     - vsetko
 
 3. organizations:
@@ -31,15 +31,17 @@
 4. participants:
     - rovnako ako pri organiz
 
-5. categories:
+5. categories (Lenka):
     - netusim
 ---
 6. ine (Tomas):
     - uprava textov
-    - dropdown button na aukice v menu pravit dizajn
+    - dropdown button na aukcie v menu upravit dizajn
 ---
 7. deployment (David + Tono):
+  1.
     - Dockerfile
     - upload docker image na docker hub
     - azure/heroku/ine spustit cez to ten docker image 
+  2.
     - ALEBO iny spobob  
