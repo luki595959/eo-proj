@@ -39,9 +39,9 @@
     - dropdown button na aukcie v menu upravit dizajn
 ---
 7. deployment (David + Tono):
-    - 1
-        -- Dockerfile
-        -- upload docker image na docker hub
-        -- azure/heroku/ine spustit cez to ten docker image 
-    - 2
-        -- ALEBO iny spobob  
+    - 1.
+        - Dockerfile
+        - upload docker image na docker hub
+        - azure/heroku/ine spustit cez to ten docker image 
+    - 2.
+        - ALEBO iny spobob  
