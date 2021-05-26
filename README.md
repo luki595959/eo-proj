@@ -6,8 +6,8 @@
  ```
  - spustenie apky
  - ```
- npm start
- ```
+   npm start
+   ```
 
 # 2. to do:
 1. aukcie
