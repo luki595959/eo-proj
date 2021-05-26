@@ -38,4 +38,8 @@
 6. ine:
     - uprava textov
     - dropdown button na aukice v menu pravit dizajn
-   
+---
+7. deployment
+    - Dockerfile
+    - upload docker image na docker hub
+    - azure/heroku/ine spustit cez to ten docker image   
