@@ -1,4 +1,9 @@
-# to do:
+# 1. Pred zacatim:
+ - rozbalit db.zip 
+ - npm i -> instalacia kniznic
+ - npm start ->spustenie apky na localhost:8080
+
+# 2. to do:
 1. aukcie
     - posled 15 popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
 
