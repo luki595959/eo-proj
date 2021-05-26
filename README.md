@@ -2,8 +2,8 @@
  - rozbalit db.zip 
  - instalacia kniznic
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```
-   npm i
-   ```
+                                     npm i
+                                     ```
  - spustenie apky:
  - ```
    npm start
