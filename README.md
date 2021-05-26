@@ -1,7 +1,7 @@
 # 1. Pred zacatim:
  - rozbalit db.zip 
  - instalacia kniznic
- - ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```
    npm i
    ```
  - spustenie apky:
