@@ -1,7 +1,13 @@
 # 1. Pred zacatim:
  - rozbalit db.zip 
- - npm i -> instalacia kniznic
- - npm start ->spustenie apky na localhost:8080
+ - instalacia kniznic
+ ```
+ npm i
+ ```
+ - spustenie apky
+ - ```
+ npm start
+ ```
 
 # 2. to do:
 1. aukcie
