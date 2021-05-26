@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+
+<body>
+    <div class="col-md-12">
+        <h1>participant: <%=organization%>
+        </h1>
+
+        <table class="table">
+            <tr>
+                <td title="ID">ID</td>
+                <td title="organization">organization</td>
+                <td title="auctionStart">auctionStart</td>
+                <td title="auctionEnd">auctionEnd</td>
+                <td title="auctionName">auctionName</td>
+                <td title="auctionVal">auctionVal</td>
+                <td title="comparativePrice">comparativePrice</td>
+                <td title="winnerOffer">winnerOffer</td>
+                <td title="currency">currency</td>
+                <td title="invitationsCount">invitationsCount</td>
+                <td title="activeParticipantsCount">activeParticipantsCount</td>
+                <td title="winner">winner</td>
+                <td title="auctionType">auctionType</td>
+                <td title="category">category</td>
+                <td title="subcategory">subcategory</td>
+                <td title="itemsCount">itemsCount</td>
+                <td title="offerChangesCount">offerChangesCount</td>
+                <td title="extensionsCount">extensionsCount</td>
+                <td title="country">country</td>
+                <td title="percentageReductionMinStep">percentageReductionMinStep</td>
+                <td title="savingComparison">savingComparison</td>
+            </tr>
+
+            <% auctions.forEach(function(data){ %>
+                <tr>
+                    <td title="ID">
+                        <a href="/auctions/<%=data.auctionUniqueId%>">
+                            <%=data.auctionUniqueId%>
+                        </a>
+                    </td>
+                    <td title="organization">
+                        <%=data.organization%>
+                    </td>
+                    <td title="auctionStart">
+                        <%=data.auctionStart%>
+                    </td>
+                    <td title="auctionEnd">
+                        <%=data.auctionEnd%>
+                    </td>
+                    <td title="auctionName">
+                        <%=data.auctionName%>
+                    </td>
+                    <td title="auctionVal">
+                        <%=data.auctionVal%>
+                    </td>
+                    <td title="comparativePrice">
+                        <%=data.comparativePrice%>
+                    </td>
+                    <td title="winnerOffer">
+                        <%=data.winnerOffer%>
+                    </td>
+                    <td title="currency">
+                        <%=data.currency%>
+                    </td>
+                    <td title="invitationsCount">
+                        <%=data.invitationsCount%>
+                    </td>
+                    <td title="activeParticipantsCount">
+                        <%=data.activeParticipantsCount%>
+                    </td>
+                    <td title="winner">
+                        <%=data.winner%>
+                    </td>
+                    <td title="auctionType">
+                        <%=data.auctionType%>
+                    </td>
+                    <td title="category">
+                        <%=data.category%>
+                    </td>
+                    <td title="subcategory">
+                        <%=data.subcategory%>
+                    </td>
+                    <td title="itemsCount">
+                        <%=data.itemsCount%>
+                    </td>
+                    <td title="offerChangesCount">
+                        <%=data.offerChangesCount%>
+                    </td>
+                    <td title="extensionsCount">
+                        <%=data.extensionsCount%>
+                    </td>
+                    <td title="country">
+                        <%=data.country%>
+                    </td>
+                    <td title="percentageReductionMinStep">
+                        <%=data.percentageReductionMinStep%>
+                    </td>
+                    <td title="savingComparison">
+                        <%=data.savingComparison%>
+                    </td>
+                </tr>
+                <% }); %>
+
+        </table>
+
+
+    </div>
+</body>
+
+</html>
