@@ -10,7 +10,7 @@
        ```
  - apka bezi na localhost:8080
 
-# 2. to do:
+# 2. To do:
 1. aukcie (Lenka + Tomas):
     - posled 15 popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
 2. statistky (Lenka):
