@@ -1,13 +1,13 @@
 # 1. Pred zacatim:
  - rozbalit db.zip 
- - instalacia kniznic
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```
-                                     npm i
-                                     ```
+ - instalacia kniznic:
+&nbsp; ```
+       npm i
+       ```
  - spustenie apky:
- - ```
-   npm start
-   ```
+&nbsp; ```
+       npm start
+       ```
  - apka bezi na localhost:8080
 
 # 2. to do:
