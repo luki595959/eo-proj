@@ -34,7 +34,8 @@
 
 5. categories
     - netusim
-
+---
 6. ine:
     - uprava textov
     - dropdown button na aukice v menu pravit dizajn
+   
