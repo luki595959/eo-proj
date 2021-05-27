@@ -11,12 +11,16 @@
  - apka bezi na localhost:8080
 
 # 2. To do:
-1. aukcie (Lenka + Tomas):
+1. aukcie:
     - posled 15 popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
-2. statistky (Lenka):
+    - INAK HOTOVO
+2. statistky:
     - vsetko
 
-3. organizations (Lukas):
+3. organizations:
+   - HOTOVO
+
+4. participants:
     - tabulka s aukciami klikatelne na aukciu
     - graf auctionVal kolacovy
     - celkova cena kolko zaplatili za vsetky aukcie
@@ -27,16 +31,12 @@
     - vypis kategoii + subkateg (uniq)
     - pocet polozek nakupenych
     - celkove uspory
-
-4. participants (Lukas):
-    - rovnako ako pri organiz
-
-5. categories (Lenka):
+5. categories:
     - netusim
 ---
 6. ine:
-    - uprava textov (Tomas)
-    - dropdown button na aukcie v menu upravit dizajn (Lenka)
+    - uprava textov
+    - dropdown button na aukcie v menu upravit dizajn
 ---
 7. deployment (David + Tono):
     -  Cez Docker
