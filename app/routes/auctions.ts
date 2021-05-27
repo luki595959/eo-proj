@@ -52,8 +52,8 @@ router.get('/auctions/q/:name', async (req: Request, res: Response) => {
     [row[0].auctionUniqueId]
   )
   var t = removeDuplicates(ll, "auctionName")
-  console.log(row)
-  console.log(offers)
+  //console.log(row)
+  //console.log(offers)
   return res.render("auctions/auc_name", { data: row, offers: offers, ll: t })
 })
 
