@@ -16,20 +16,15 @@
     - INAK HOTOVO
 2. statistky:
     - vsetko
-
 3. organizations:
    - HOTOVO
-
 4. participants:
     - HOTOVO
 5. categories:
     - netusim
 ---
 6. ine:
-    - uprava textov
     - dropdown button na aukcie v menu upravit dizajn
-    - menu oragnizaciu nastavit na 100, particip na 654
-    - osetrit ak participant nema aukcie
 ---
 7. deployment (David + Tono):
     -  Cez Docker
