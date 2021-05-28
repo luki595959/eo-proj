@@ -21,7 +21,7 @@
    - HOTOVO
 
 4. participants:
-    -HOTOVO
+    - HOTOVO
 5. categories:
     - netusim
 ---
