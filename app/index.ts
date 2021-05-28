@@ -1,5 +1,5 @@
 import * as express from 'express'
-import { Router, Request, Response } from 'express'
+import { Router, Request, Response, NextFunction } from 'express'
 import * as path from 'path';
 import { Application } from 'express'
 import * as cors from 'cors'
@@ -20,6 +20,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/aa', async (req: Request, res: Response) => {
   return res.render("landing")
 })
+
 app.use(global)
 app.use(categories)
 app.use(auctions)
