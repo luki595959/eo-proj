@@ -130,9 +130,9 @@
             <section class="row" id="tmServices">
                 <div class="col-4"></div>
                 <div class="col-8">
-                    <label class="tm-tab-links " for="id_au" style="color: white;">Vyber aukcie:</label>
+                    <label class="tm-tab-links " for="id_au" style="color: white;">Vyber organizacie:</label>
                     <select style="color: black;" name="id_au" class="form-control" onchange="location = this.value;">
-                        <option value="">ID AU</option>
+                        <option value="">ID Orgsnizacie</option>
 
                         <% data.forEach(function(data){ %>
                             <option value="/organizations/<%=data%>">
@@ -220,6 +220,11 @@
 
                                                         }]
 
+                                                    }, options: {
+                                                        legend: {
+                                                            display: false
+                                                        }
+
                                                     }
 
                                                 });
@@ -266,6 +271,11 @@
 
                                                         }]
 
+                                                    }, options: {
+                                                        legend: {
+                                                            display: false
+                                                        }
+
                                                     }
 
                                                 });
@@ -285,7 +295,10 @@
                                             <canvas id="myChart2" width="500" height="250"></canvas>
                                             <script>
                                                 var aa = "<%=lst2%>"
-                                                aa = aa.split(",")
+                                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+
+                                                aa = aa.split(/,(?=[A-Z])/)
+
                                                 var b = aa.reduce(function (acc, curr) {
                                                     if (typeof acc[curr] == 'undefined') {
                                                         acc[curr] = 1;
@@ -312,6 +325,11 @@
 
                                                         }]
 
+                                                    }, options: {
+                                                        legend: {
+                                                            display: false
+                                                        }
+
                                                     }
 
                                                 });
@@ -330,7 +348,9 @@
                                             <canvas id="myChart3" width="250" height="125"></canvas>
                                             <script>
                                                 var aa = "<%=lst2%>"
-                                                aa = aa.split(",")
+                                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+
+                                                aa = aa.split(/,(?=[A-Z])/)
                                                 var b = aa.reduce(function (acc, curr) {
                                                     if (typeof acc[curr] == 'undefined') {
                                                         acc[curr] = 1;
@@ -357,6 +377,11 @@
 
                                                         }]
 
+                                                    }, options: {
+                                                        legend: {
+                                                            display: false
+                                                        }
+
                                                     }
 
                                                 });
@@ -367,6 +392,25 @@
             </section>
             <div class="row" id="tmFeatures">
                 <h2 class="col-12 text-center" style="color:white"><b>Statistiky</b></h2>
+
+                <div class="col-lg-4" style="margin-bottom: 25px;">
+                    <div class="tm-bg-white-transparent tm-feature-box">
+                        <h3 class="tm-feature-name">Polozky</h3>
+                        <div class="tm-feature-icon-container">
+                            <i class="fas fa-3x fa-box-open"></i>
+                        </div>
+                        <p class="text-center">Celkovy pocet nakupenych poloziek.
+                        </p>
+                        <%val1=0%>
+                            <% auctions.forEach(function(data){ %>
+                                <%val1=val1 + data.itemsCount%>
+                                    <% }); %>
+                                        <h3>
+                                            <%=val1%> ks
+
+                                        </h3>
+                    </div>
+                </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
                     <div class="tm-bg-white-transparent tm-feature-box">
                         <h3 class="tm-feature-name">Vydavky</h3>
@@ -394,24 +438,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4" style="margin-bottom: 25px;">
-                    <div class="tm-bg-white-transparent tm-feature-box">
-                        <h3 class="tm-feature-name">Polozky</h3>
-                        <div class="tm-feature-icon-container">
-                            <i class="fas fa-3x fa-box-open"></i>
-                        </div>
-                        <p class="text-center">Celkovy pocet nakupenych poloziek.
-                        </p>
-                        <%val1=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val1=val1 + data.itemsCount%>
-                                    <% }); %>
-                                        <h3>
-                                            <%=val1%> ks
 
-                                        </h3>
-                    </div>
-                </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
                     <div class="tm-bg-white-transparent tm-feature-box">
                         <h3 class="tm-feature-name">Uspory</h3>
