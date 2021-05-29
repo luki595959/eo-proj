@@ -86,7 +86,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <div class="tm-nav-link-highlight"></div>
-                                        <a class="nav-link" href="/">Kategórie</a>
+                                        <a class="nav-link" href="/categories">Kategórie</a>
                                     </li>
                                     <li class="nav-item">
                                         <div class="tm-nav-link-highlight"></div>
@@ -216,7 +216,6 @@
             <%- include('../partials/footer.ejs'); %>
         </div>
     </div>
-
     <script src="/js/jquery.min.js"></script>
     <script src="/js/parallax.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -234,7 +233,6 @@
                 $this.addClass('active');
                 $(tabgroup).children('div').hide();
                 $(target).show();
-
                 // Scroll to tab content (for mobile)
                 if ($(window).width() < 992) {
                     $('html, body').animate({
@@ -243,7 +241,6 @@
                 }
             })
         });
-
     </script>
 </body>
 

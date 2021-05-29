@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon"
-        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <title>Aukcie - Štatistiky</title>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -82,7 +80,7 @@
                                     </li>
                                     <li class="nav-item ">
                                         <div class="tm-nav-link-highlight"></div>
-                                        <a class="nav-link" href="/">Kategórie</a>
+                                        <a class="nav-link" href="/categories">Kategórie</a>
                                     </li>
                                     <li class="nav-item">
                                         <div class="tm-nav-link-highlight"></div>
@@ -126,9 +124,7 @@
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Počet aukcií</h3>
                                 <p class="tm-app-feature-description">Celkový počet uskutočnených aukcií:</p>
-                                <h4><b>
-                                        <%=data[0].auctions%>
-                                    </b></h4>
+                                <h4><b><%=data[0].auctions%></b></h4>
                             </div>
                         </div>
                     </div>
@@ -140,9 +136,7 @@
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Počet organizácií</h3>
                                 <p class="tm-app-feature-description">Celkový počet oragnizácií v dátach:</p>
-                                <h4><b>
-                                        <%=data[0].organizations%>
-                                    </b></h4>
+                                <h4><b><%=data[0].organizations%></b></h4>
                             </div>
                         </div>
                     </div>
@@ -153,11 +147,8 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Úspory</h3>
-                                <p class="tm-app-feature-description">Priemerné úspory vypočítané na základe údajov z
-                                    dát:</p>
-                                <h4><b>
-                                        <%=Math.round(data[1].avgSavings *1000) / 1000%> €
-                                    </b></h4>
+                                <p class="tm-app-feature-description">Priemerné úspory vypočítané na základe údajov z dát:</p>
+                                <h4><b><%=Math.round(data[1].avgSavings *1000) / 1000%> €</b></h4>
                             </div>
                         </div>
                     </div>
@@ -168,189 +159,157 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Účastníci</h3>
-                                <p class="tm-app-feature-description">Celkový počet dodávateľov zúčastnených na
-                                    aukciách:</p>
-                                <h4><b>
-                                        <%=data[2].participants%>
-                                    </b></h4>
+                                <p class="tm-app-feature-description">Celkový počet dodávateľov zúčastnených na aukciách:</p>
+                                <h4><b><%=data[2].participants%></b></h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- About -->
             <section class="row" id="tmAbout">
                 <header class="col-12 tm-about-header">
-                    <h2 class="text-uppercase text-center text-white tm-about-page-title">Kategórie
-                    </h2>
+                    <h2 class="text-uppercase text-center text-white tm-about-page-title">Kategórie</h2>
                     <hr class="tm-about-title-hr">
                 </header>
-
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-newspaper"></i>
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-newspaper"></i>
                         </div>
-                        <h3 class="tm-about-name">Marketing, reklama a tisk
-                        </h3>
-
-                        <a href="/stats/category/Marketing, reklama a tisk
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Marketing, reklama a tisk</h3>
+                        <a href="/stats/category/Marketing, reklama a tisk" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-heartbeat"></i>
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-heartbeat"></i>
                         </div>
-                        <h3 class="tm-about-name">Zdravotnictví &emsp;&emsp;&emsp;&emsp;&emsp;
-                        </h3>
-
-                        <a href="/stats/category/Zdravotnictví
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Zdravotnictví &emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Zdravotnictví" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-archive"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-archive"></i>
                         </div>
-                        <h3 class="tm-about-name">Obaly &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                        </h3>
-
-                        <a href="/stats/category/Obaly
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Obaly &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Obaly" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-hard-hat"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-hard-hat"></i>
                         </div>
-                        <h3 class="tm-about-name">Stavebnictví &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                        </h3>
-
-                        <a href="/stats/category/Stavebnictví
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Stavebnictví &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Stavebnictví" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-tools"></i>
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-tools"></i>
                         </div>
-                        <h3 class="tm-about-name">Stroje, zařízení, nástroje, nářadí
-
-                        </h3>
-
-                        <a href="/stats/category/Stroje, zařízení, nástroje, nářadí
-
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Stroje, zařízení, nástroje, nářadí</h3>
+                        <a href="/stats/category/Stroje, zařízení, nástroje, nářadí" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-industry"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-industry"></i>
                         </div>
-                        <h3 class="tm-about-name">Hutní materiál, kovy a slitiny
-                        </h3>
-                        <a href="/stats/category/Hutní materiál, kovy a slitiny
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-desktop"></i>
-                        </div>
-                        <h3 class="tm-about-name">Počítače, IT a telekomunikační služby
-                        </h3>
-                        <a href="/stats/category/Počítače, IT a telekomunikační služby
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Hutní materiál, kovy a slitiny</h3>
+                        <a href="/stats/category/Hutní materiál, kovy a slitiny" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-truck-moving"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-desktop"></i>
                         </div>
-                        <h3 class="tm-about-name">Dopravní služby, auto-moto a příslušenství
-                        </h3>
-                        <a href="/stats/category/Dopravní služby, auto-moto a příslušenství
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Počítače, IT a telekomunikační služby</h3>
+                        <a href="/stats/category/Počítače, IT a telekomunikační služby" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-trash-restore"></i>
+                        <div class="tm-about-number-container">
+                             <i class="fas fa-truck-moving"></i>
                         </div>
-                        <h3 class="tm-about-name">Odpadové hospodářství &emsp;&emsp;&emsp;&emsp;
-
-                        </h3>
-                        <a href="/stats/category/Odpadové hospodářství
-
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Dopravní služby, auto-moto a příslušenství</h3>
+                        <a href="/stats/category/Dopravní služby, auto-moto a příslušenství" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-broom"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-trash-restore"></i>
                         </div>
-                        <h3 class="tm-about-name">Úklid, úklidové služby
-                        </h3>
-
-                        <a href="/stats/category/Úklid, úklidové služby
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Odpadové hospodářství &emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Odpadové hospodářství"class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-plug"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-broom"></i>
                         </div>
-                        <h3 class="tm-about-name">Elektro, elektromateriál
-                        </h3>
-                        <a href="/stats/category/Elektro, elektromateriál
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Úklid, úklidové služby</h3>
+                        <a href="/stats/category/Úklid, úklidové služby" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-cogs"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-plug"></i>
                         </div>
-                        <h3 class="tm-about-name">Inženýrská činnost&emsp;&emsp;
-                        </h3>
-
-                        <a href="/stats/category/Inženýrská činnost
-
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <h3 class="tm-about-name">Elektro, elektromateriál</h3>
+                        <a href="/stats/category/Elektro, elektromateriál" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-utensils"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="tm-about-name">Inženýrská činnost&emsp;&emsp;</h3>
+                        <a href="/stats/category/Inženýrská činnost" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-utensils"></i>
                         </div>
                         <h3 class="tm-about-name">Potraviny a nápoje </h3>
-
-                        <a href="/stats/category/Potraviny a nápoje
-
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <a href="/stats/category/Potraviny a nápoje" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-briefcase"></i>
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-briefcase"></i>
                         </div>
                         <h3 class="tm-about-name">Kancelář</h3>
-
-                        <a href="/stats/category/Kancelář
-                        " class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                        <a href="/stats/category/Kancelář" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="tm-bg-black-transparent tm-about-box">
-                        <div class="tm-about-number-container"> <i class="fas fa-flask"></i>
+                        <div class="tm-about-number-container">
+                             <i class="fas fa-flask"></i>
                         </div>
                         <h3 class="tm-about-name">Chemie</h3>
                         <a href="/stats/category/Chemie" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
                     </div>
                 </div>
                 <footer class="col-12 tm-about-header">
-                    <h2 class="text-uppercase text-center text-white tm-about-page-title"><a
-                            href="/stats/subcategory/Zdravotnický materiál"> Zobraziť štatistiky pre subkategórie
+                    <h2 class="text-uppercase text-center text-white tm-about-page-title">
+                        <a href="/stats/subcategory/Zdravotnický materiál"> Zobraziť štatistiky pre subkategórie</a>
+                    </h2>
                 </footer>
             </section>
             <%- include('../partials/footer.ejs'); %>

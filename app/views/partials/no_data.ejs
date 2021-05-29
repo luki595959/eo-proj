@@ -93,18 +93,12 @@
                 </div>
             </div>
             <section class="row" id="tmHome">
-                <h1 class="col-12 text-center" style="color:white">Účasník <%=participant%> sa nezúčastil na žiadnej
-                        aukcii</h1>
+                <h1 class="col-12 text-center" style="color:white">Účasník <%=participant%> sa nezúčastil na žiadnej aukcii</h1>
                 <div class="col-12">
                     <div id="chartdiv"></div>
                 </div>
             </section>
-            <footer class="row">
-                <p class="col-12 text-white text-center tm-copyright-text">
-                    Copyright &copy; 2021 EO Project.
-                    Designed by Lenka, Luki and Tomi.
-                </p>
-            </footer>
+            <%- include('./footer.ejs'); %>
         </div>
     </div>
     <script src="/js/jquery.min.js"></script>
