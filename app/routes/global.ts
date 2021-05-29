@@ -67,6 +67,7 @@ router.get('/stats/category/:category', async (req: Request, res: Response) => {
     'SELECT category FROM auctions '
   )
   var t = removeDuplicates(ll, "category")
+
   var data = [
     auctionStats,
     savings,
