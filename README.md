@@ -21,7 +21,7 @@
 4. participants:
     - HOTOVO
 5. categories:
-    - netusim
+    - HOTOVO
 ---
 6. ine:
     - dropdown button na aukcie v menu upravit dizajn
