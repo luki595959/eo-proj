@@ -15,7 +15,7 @@
     - posled 15 popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
     - INAK HOTOVO
 2. statistky:
-    - vsetko
+    - HOTOVO
 3. organizations:
    - HOTOVO
 4. participants:
