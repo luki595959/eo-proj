@@ -1,5 +1,6 @@
 # 1. Spustenie:
  - rozbalit db.zip 
+ - data/csv/ je zipko s csv datami aj to rozbalit
  - instalacia kniznic:
 &nbsp; ```
        npm i
