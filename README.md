@@ -1,4 +1,4 @@
-# 1. Pred zacatim:
+# 1. Spustenie:
  - rozbalit db.zip 
  - instalacia kniznic:
 &nbsp; ```
