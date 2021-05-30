@@ -5,10 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aukcie - Organizácia: <%=auctions[0].organization %>
-    </title>
-    <link rel="icon"
-        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <title>Aukcie - Organizácia: <%=auctions[0].organization %></title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -127,84 +125,78 @@
                             <option value="/organizations/<%=data%>">
                                 <%=data%>
                             </option>
-                            <% }); %>
+                        <%});%>
                     </select>
                 </div>
                 <div class="col-12">
                     <div class="parallax-window tm-services-parallax-header tm-testimonials-parallax-header"
                         data-parallax="scroll" data-z-index="101" data-image-src="img/ice-mountain.jpg">
                         <div class="tm-bg-black-transparent text-center tm-services-header tm-testimonials-header">
-                            <h2 class="text-uppercase tm-services-page-title tm-testimonials-page-title">Ogranizácia:
-                                <%=auctions[0].organization %>
-                            </h2>
+                            <h2 class="text-uppercase tm-services-page-title tm-testimonials-page-title">Ogranizácia: <%=auctions[0].organization %></h2>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="row tm-testimonials-section">
-                <h2 class="col-12 text-center" style="color: white;"><b>Aukcie pre Ogranizaciu
-                    </b>
-                </h2>
+                <h2 class="col-12 text-center" style="color: white;"><b>Aukcie pre Ogranizaciu</b></h2>
                 <div class="col-12 tm-carousel">
                     <%for(var i=0;i < auctions.length;i+=25){%>
                         <div class="tm-bg-black-transparent tm-testimonial-box text-center">
                             <p class="tm-about-description">
                                 <%for(var j=0;j < 25;j++){%>
                                     <% if(i+j>= auctions.length){break;}%>
-                                        <a href="/auctions/<%=auctions[i+j].auctionUniqueId%>">
-                                            <%=auctions[i+j].auctionUniqueId%>
-                                        </a>
-                                        <br>
-                                        <%}%>
+                                    <a href="/auctions/<%=auctions[i+j].auctionUniqueId%>"><%=auctions[i+j].auctionUniqueId%></a>
+                                    <br>
+                                <%}%>
                             </p>
                         </div>
-                        <% } %>
+                    <%}%>
                 </div>
             </section>
             <section class="row tm-testimonials-section ">
-                <h2 class="col-12 text-center" style="color: white;"> Grafy
-                </h2>
+                <h2 class="col-12 text-center" style="color: white;">Grafy</h2>
+                <br>
                 <div class="col-6">
                     <div class="tm-bg-black-transparent tm-testimonial-box text-center">
                         <h3 class="tm-about-name tm-uppercase">Typy vyhodnotenia aukcií</h3>
                         <p class="tm-about-description">
                             <%=lst=[]%>
-                                <% auctions.forEach(function(data){ %>
-                                    <%lst.push(data.auctionVal)%>
-                                        <% }); %>
-                                            <canvas id="myChart" width="500" height="250"></canvas>
-                                            <script>
-                                                var aa = "<%=lst%>"
-                                                aa = aa.split(",")
-                                                var b = aa.reduce(function (acc, curr) {
-                                                    if (typeof acc[curr] == 'undefined') {
-                                                        acc[curr] = 1;
-                                                    } else {
-                                                        acc[curr] += 1;
-                                                    }
-                                                    return acc;
-                                                }, {});
-                                                colors = []
-                                                for (var i = 0; i < Object.keys(b).length; i++) {
-                                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
-                                                }
-                                                const ctx = document.getElementById('myChart').getContext('2d');
-                                                const myChart = new Chart(ctx, {
-                                                    type: 'pie',
-                                                    data: {
-                                                        labels: Object.keys(b),
-                                                        datasets: [{
-                                                            label: 'cena',
-                                                            data: Object.values(b),
-                                                            backgroundColor: colors,
-                                                        }]
-                                                    }, options: {
-                                                        legend: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                });
-                                            </script>
+                            <% auctions.forEach(function(data){ %>
+                                <%lst.push(data.auctionVal)%>
+                            <%});%>
+                            <canvas id="myChart" width="500" height="250"></canvas>
+                            <script>
+                                var aa = "<%=lst%>"
+                                aa = aa.split(",")
+                                var b = aa.reduce(function (acc, curr) {
+                                    if (typeof acc[curr] == 'undefined') {
+                                        acc[curr] = 1;
+                                    } else {
+                                        acc[curr] += 1;
+                                    }
+                                    return acc;
+                                }, {});
+                                colors = []
+                                for (var i = 0; i < Object.keys(b).length; i++) {
+                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
+                                }
+                                const ctx = document.getElementById('myChart').getContext('2d');
+                                const myChart = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: Object.keys(b),
+                                        datasets: [{
+                                            label: 'cena',
+                                            data: Object.values(b),
+                                            backgroundColor: colors,
+                                        }]
+                                    }, options: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                });
+                            </script>
                         </p>
                     </div>
                 </div>
@@ -213,42 +205,42 @@
                         <h3 class="tm-about-name tm-uppercase">Typy auckií</h3>
                         <p class="tm-about-description">
                             <%=lst1=[]%>
-                                <% auctions.forEach(function(data){ %>
-                                    <%lst1.push(data.auctionType)%>
-                                        <% }); %>
-                                            <canvas id="myChart1" width="500" height="250"></canvas>
-                                            <script>
-                                                var aa = "<%=lst1%>"
-                                                aa = aa.split(",")
-                                                var b = aa.reduce(function (acc, curr) {
-                                                    if (typeof acc[curr] == 'undefined') {
-                                                        acc[curr] = 1;
-                                                    } else {
-                                                        acc[curr] += 1;
-                                                    }
-                                                    return acc;
-                                                }, {});
-                                                colors = []
-                                                for (var i = 0; i < Object.keys(b).length; i++) {
-                                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
-                                                }
-                                                const ctx1 = document.getElementById('myChart1').getContext('2d');
-                                                const myChart1 = new Chart(ctx1, {
-                                                    type: 'pie',
-                                                    data: {
-                                                        labels: Object.keys(b),
-                                                        datasets: [{
-                                                            label: 'cena',
-                                                            data: Object.values(b),
-                                                            backgroundColor: colors,
-                                                        }]
-                                                    }, options: {
-                                                        legend: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                });
-                                            </script>
+                            <% auctions.forEach(function(data){ %>
+                                <%lst1.push(data.auctionType)%>
+                            <%});%>
+                            <canvas id="myChart1" width="500" height="250"></canvas>
+                            <script>
+                                var aa = "<%=lst1%>"
+                                aa = aa.split(",")
+                                var b = aa.reduce(function (acc, curr) {
+                                    if (typeof acc[curr] == 'undefined') {
+                                        acc[curr] = 1;
+                                    } else {
+                                        acc[curr] += 1;
+                                    }
+                                    return acc;
+                                }, {});
+                                colors = []
+                                for (var i = 0; i < Object.keys(b).length; i++) {
+                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
+                                }
+                                const ctx1 = document.getElementById('myChart1').getContext('2d');
+                                const myChart1 = new Chart(ctx1, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: Object.keys(b),
+                                        datasets: [{
+                                            label: 'cena',
+                                            data: Object.values(b),
+                                            backgroundColor: colors,
+                                        }]
+                                    }, options: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                });
+                            </script>
                         </p>
                     </div>
                 </div>
@@ -257,43 +249,43 @@
                         <h3 class="tm-about-name tm-uppercase">Pomer kategórií</h3>
                         <p class="tm-about-description">
                             <%=lst2=[]%>
-                                <% auctions.forEach(function(data){ %>
-                                    <%lst2.push(data.category)%>
-                                        <% }); %>
-                                            <canvas id="myChart2" width="500" height="250"></canvas>
-                                            <script>
-                                                var aa = "<%=lst2%>"
-                                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                                                aa = aa.split(/,(?=[A-Z])/)
-                                                var b = aa.reduce(function (acc, curr) {
-                                                    if (typeof acc[curr] == 'undefined') {
-                                                        acc[curr] = 1;
-                                                    } else {
-                                                        acc[curr] += 1;
-                                                    }
-                                                    return acc;
-                                                }, {});
-                                                colors = []
-                                                for (var i = 0; i < Object.keys(b).length; i++) {
-                                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
-                                                }
-                                                const ctx2 = document.getElementById('myChart2').getContext('2d');
-                                                const myChart2 = new Chart(ctx2, {
-                                                    type: 'pie',
-                                                    data: {
-                                                        labels: Object.keys(b),
-                                                        datasets: [{
-                                                            label: 'cena',
-                                                            data: Object.values(b),
-                                                            backgroundColor: colors,
-                                                        }]
-                                                    }, options: {
-                                                        legend: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                });
-                                            </script>
+                            <% auctions.forEach(function(data){ %>
+                                <%lst2.push(data.category)%>
+                            <%});%>
+                            <canvas id="myChart2" width="500" height="250"></canvas>
+                            <script>
+                                var aa = "<%=lst2%>"
+                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                                aa = aa.split(/,(?=[A-Z])/)
+                                var b = aa.reduce(function (acc, curr) {
+                                    if (typeof acc[curr] == 'undefined') {
+                                        acc[curr] = 1;
+                                    } else {
+                                        acc[curr] += 1;
+                                    }
+                                    return acc;
+                                }, {});
+                                colors = []
+                                for (var i = 0; i < Object.keys(b).length; i++) {
+                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
+                                }
+                                const ctx2 = document.getElementById('myChart2').getContext('2d');
+                                const myChart2 = new Chart(ctx2, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: Object.keys(b),
+                                        datasets: [{
+                                            label: 'cena',
+                                            data: Object.values(b),
+                                            backgroundColor: colors,
+                                        }]
+                                    }, options: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                });
+                            </script>
                         </p>
                     </div>
                 </div>
@@ -302,44 +294,43 @@
                         <h3 class="tm-about-name tm-uppercase">Pomer subkategórií</h3>
                         <p class="tm-about-description">
                             <%=lst2=[]%>
-                                <% auctions.forEach(function(data){ %>
-                                    <%lst2.push(data.subcategory)%>
-                                        <% }); %>
-                                            <canvas id="myChart3" width="250" height="125"></canvas>
-                                            <script>
-                                                var aa = "<%=lst2%>"
-                                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
-                                                aa = aa.split(/,(?=[A-Z])/)
-                                                var b = aa.reduce(function (acc, curr) {
-                                                    if (typeof acc[curr] == 'undefined') {
-                                                        acc[curr] = 1;
-                                                    } else {
-                                                        acc[curr] += 1;
-                                                    }
-
-                                                    return acc;
-                                                }, {});
-                                                colors = []
-                                                for (var i = 0; i < Object.keys(b).length; i++) {
-                                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
-                                                }
-                                                const ctx3 = document.getElementById('myChart3').getContext('2d');
-                                                const myChart3 = new Chart(ctx3, {
-                                                    type: 'pie',
-                                                    data: {
-                                                        labels: Object.keys(b),
-                                                        datasets: [{
-                                                            label: 'cena',
-                                                            data: Object.values(b),
-                                                            backgroundColor: colors,
-                                                        }]
-                                                    }, options: {
-                                                        legend: {
-                                                            display: false
-                                                        }
-                                                    }
-                                                });
-                                            </script>
+                            <% auctions.forEach(function(data){ %>
+                                <%lst2.push(data.subcategory)%>
+                            <%});%>
+                            <canvas id="myChart3" width="250" height="125"></canvas>
+                            <script>
+                                var aa = "<%=lst2%>"
+                                aa = aa.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+                                aa = aa.split(/,(?=[A-Z])/)
+                                var b = aa.reduce(function (acc, curr) {
+                                    if (typeof acc[curr] == 'undefined') {
+                                        acc[curr] = 1;
+                                    } else {
+                                        acc[curr] += 1;
+                                    }
+                                    return acc;
+                                }, {});
+                                colors = []
+                                for (var i = 0; i < Object.keys(b).length; i++) {
+                                    colors.push('#' + Math.floor(Math.random() * 16777215).toString(16),)
+                                }
+                                const ctx3 = document.getElementById('myChart3').getContext('2d');
+                                const myChart3 = new Chart(ctx3, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: Object.keys(b),
+                                        datasets: [{
+                                            label: 'cena',
+                                            data: Object.values(b),
+                                            backgroundColor: colors,
+                                        }]
+                                    }, options: {
+                                        legend: {
+                                            display: false
+                                        }
+                                    }
+                                });
+                            </script>
                         </p>
                     </div>
                 </div>
@@ -352,15 +343,12 @@
                         <div class="tm-feature-icon-container">
                             <i class="fas fa-3x fa-box-open"></i>
                         </div>
-                        <p class="text-center">Celkový počet nakúpených položiek.
-                        </p>
+                        <p class="text-center">Celkový počet nakúpených položiek.</p>
                         <%val1=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val1=val1 + data.itemsCount%>
-                                    <% }); %>
-                                        <h3>
-                                            <%=val1%> ks
-                                        </h3>
+                        <% auctions.forEach(function(data){ %>
+                            <%val1=val1 + data.itemsCount%>
+                        <%});%>
+                        <h3><%=val1%> ks</h3>
                     </div>
                 </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
@@ -370,19 +358,15 @@
                             <i class="fas fa-3x fa-money-bill-wave"></i>
                         </div>
                         <%val=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val=val + data.winnerOffer%>
-                                    <% }); %>
-                                        <p class="text-center">Celkové výdavky: <b>
-                                                <%=Math.round(val *1000) / 1000 %>
-                                                    <%=auctions[0].currency%>
-                                            </b>.
-                                            <br>
-                                            Priemerné výdavky na 1 položku: <b>
-                                                <%=Math.round((val / val1) * 1000) / 1000 %>
-                                                    <%=auctions[0].currency%>
-                                            </b>.
-                                        </p>
+                        <% auctions.forEach(function(data){ %>
+                             <%val=val + data.winnerOffer%>
+                        <%});%>
+                        <p class="text-center">Celkové výdavky: 
+                            <b><%=Math.round(val *1000) / 1000 %> <%=auctions[0].currency%></b>.
+                            <br>
+                            Priemerné výdavky na 1 položku: 
+                            <b><%=Math.round((val / val1) * 1000) / 1000 %> <%=auctions[0].currency%></b>.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
@@ -392,19 +376,15 @@
                             <i class="fas fa-3x fa-coins"></i>
                         </div>
                         <%val2=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val2=val2 + data.savingComparison%>
-                                    <% }); %>
-                                        <p class="text-center">Celkové úspory: <b>
-                                                <%=Math.round(val2 * 1000) / 1000 %>
-                                                    <%=auctions[0].currency%>
-                                            </b>.
-                                            <br>
-                                            Priemerné úspory: <b>
-                                                <%=Math.round((val2 / val1) * 1000) / 1000 %>
-                                                    <%=auctions[0].currency%>
-                                            </b>.
-                                        </p>
+                        <% auctions.forEach(function(data){ %>
+                            <%val2=val2 + data.savingComparison%>
+                        <%});%>
+                        <p class="text-center">Celkové úspory: 
+                            <b><%=Math.round(val2 * 1000) / 1000 %> <%=auctions[0].currency%></b>.
+                            <br>
+                            Priemerné úspory:
+                            <b><%=Math.round((val2 / val1) * 1000) / 1000 %> <%=auctions[0].currency%></b>.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
@@ -413,15 +393,12 @@
                         <div class="tm-feature-icon-container">
                             <i class="fas fa-3x fa-share-alt"></i>
                         </div>
-                        <p class="text-center">Celkový počet odoslaných pozvánok.
-                        </p>
+                        <p class="text-center">Celkový počet odoslaných pozvánok.</p>
                         <%val3=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val3=val3 + data.invitationsCount%>
-                                    <% }); %>
-                                        <h3>
-                                            <%=val3%>
-                                        </h3>
+                        <% auctions.forEach(function(data){ %>
+                            <%val3=val3 + data.invitationsCount%>
+                        <%});%>
+                        <h3><%=val3%></h3>
                     </div>
                 </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
@@ -433,12 +410,10 @@
                         <p class="text-center">Celkový počet aktívnych účastníkov.
                         </p>
                         <%val4=0%>
-                            <% auctions.forEach(function(data){ %>
-                                <%val4=val4 + data.activeParticipantsCount%>
-                                    <% }); %>
-                                        <h3>
-                                            <%=val4%>
-                                        </h3>
+                        <% auctions.forEach(function(data){ %>
+                            <%val4=val4 + data.activeParticipantsCount%>
+                        <%});%>
+                        <h3><%=val4%></h3>
                     </div>
                 </div>
                 <div class="col-lg-4" style="margin-bottom: 25px;">
@@ -447,11 +422,8 @@
                         <div class="tm-feature-icon-container">
                             <i class="fas fa-3x fa-layer-group"></i>
                         </div>
-                        <p class="text-center">Celkový počet vytvorených aukcií.
-                        </p>
-                        <h3>
-                            <%=auctions.length%>
-                        </h3>
+                        <p class="text-center">Celkový počet vytvorených aukcií.</p>
+                        <h3><%=auctions.length%></h3>
                     </div>
                 </div>
             </div>

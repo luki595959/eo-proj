@@ -5,14 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aukcie - ID: <%=data.auctionUniqueId%>
-    </title>
+    <title>Aukcie - ID: <%=data.auctionUniqueId%></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/templatemo-style.css" />
-    <link rel="icon"
-        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -117,88 +115,86 @@
                     <div class="col-4"></div>
                     <div class="col-8">
                         <label class="tm-tab-links " for="id_au" style="color: white;">Výber aukcie:</label>
-                        <select style="color: black;" name="id_au" class="form-control"
-                            onchange="location = this.value;">
+                        <select style="color: black;" name="id_au" class="form-control" onchange="location = this.value;">
                             <option value="">ID Aukcie</option>
                             <% ll.forEach(function(data){ %>
                                 <option value="/auctions/<%=data.auctionUniqueId%>">
                                     <%=data.auctionUniqueId%>
                                 </option>
-                                <% }); %>
+                            <%});%>
                         </select>
                     </div>
                     <div class="col-12">
                         <div class="parallax-window tm-services-parallax-header" data-parallax="scroll"
                             data-z-index="101" data-image-src="">
                             <div class="tm-bg-black-transparent text-center tm-services-header">
-                                <h2 class="text-uppercase tm-services-page-title">Auckia <%=data.auctionUniqueId%>
-                                </h2>
+                                <h2 class="text-uppercase tm-services-page-title">Auckia <%=data.auctionUniqueId%></h2>
                                 <p class="tm-services-description mb-0 small">
-                                <p><b>Organizácia:</b>
-                                    <%= data.organization %>
-                                </p>
-                                <p><b>Začiatok aukcie:</b>
-                                    <% var d1=new Date(+data.auctionStart);%>
-                                        <%=d1%>
-                                </p>
-                                <p><b>Koniec aukcie:</b>
-                                    <% var d2=new Date(+data.auctionEnd);%>
-                                        <%=d2%>
-                                </p>
-                                <p><b>Názov aukcie:</b>
-                                    <%= data.auctionName %>
-                                </p>
-                                <p><b>Vyhodnotenie:</b>
-                                    <%= data.auctionVal %>
-                                </p>
-                                <p><b>Porovnávacia cena:</b>
-                                    <%= data.comparativePrice %>
-                                </p>
-                                <p><b>Víťazná ponuka:</b>
-                                    <%= data.winnerOffer %>
-                                </p>
-                                <p><b>Mena:</b>
-                                    <%= data.currency %>
-                                </p>
-                                <p><b>Počet pozvánok</b>
-                                    <%= data.invitationsCount %>
-                                </p>
-                                <p><b>Počet registrovaných účastníkov:</b>
-                                    <%= data.registeredParticipantsCount %>
-                                </p>
-                                <p><b>Počet zúčastnených účastníkov:</b>
-                                    <%= data.activeParticipantsCount %>
-                                </p>
-                                <p><b>Víťaz:</b>
-                                    <%= data.winner %>
-                                </p>
-                                <p><b>Typ aukcie:</b>
-                                    <%= data.auctionType %>
-                                </p>
-                                <p><b>Kategória:</b>
-                                    <%= data.category %>
-                                </p>
-                                <p><b>Subkategória:</b>
-                                    <%= data.subcategory %>
-                                </p>
-                                <p><b>Počet položiek:</b>
-                                    <%= data.itemsCount %>
-                                </p>
-                                <p><b>Počet zmien:</b>
-                                    <%= data.offerChangesCount %>
-                                </p>
-                                <p><b>Počet predĺžení:</b>
-                                    <%= data.extensionsCount %>
-                                </p>
-                                <p><b>Krajina:</b>
-                                    <%= data.country%>
-                                </p>
-                                <p><b>Min. zníženie [%]:</b>
-                                    <%= data.percentageReductionMinStep %>
-                                </p>
-                                <p><b>Porovnanie úspory:</b>
-                                    <%= data.savingComparison %>
-                                </p>
+                                    <p><b>Organizácia:</b>
+                                        <%= data.organization %>
+                                    </p>
+                                    <p><b>Začiatok aukcie:</b>
+                                        <% var d1=new Date(+data.auctionStart);%>
+                                            <%=d1%>
+                                    </p>
+                                    <p><b>Koniec aukcie:</b>
+                                        <% var d2=new Date(+data.auctionEnd);%>
+                                            <%=d2%>
+                                    </p>
+                                    <p><b>Názov aukcie:</b>
+                                        <%= data.auctionName %>
+                                    </p>
+                                    <p><b>Vyhodnotenie:</b>
+                                        <%= data.auctionVal %>
+                                    </p>
+                                    <p><b>Porovnávacia cena:</b>
+                                        <%= data.comparativePrice %>
+                                    </p>
+                                    <p><b>Víťazná ponuka:</b>
+                                        <%= data.winnerOffer %>
+                                    </p>
+                                    <p><b>Mena:</b>
+                                        <%= data.currency %>
+                                    </p>
+                                    <p><b>Počet pozvánok</b>
+                                        <%= data.invitationsCount %>
+                                    </p>
+                                    <p><b>Počet registrovaných účastníkov:</b>
+                                        <%= data.registeredParticipantsCount %>
+                                    </p>
+                                    <p><b>Počet zúčastnených účastníkov:</b>
+                                        <%= data.activeParticipantsCount %>
+                                    </p>
+                                    <p><b>Víťaz:</b>
+                                        <%= data.winner %>
+                                    </p>
+                                    <p><b>Typ aukcie:</b>
+                                        <%= data.auctionType %>
+                                    </p>
+                                    <p><b>Kategória:</b>
+                                        <%= data.category %>
+                                    </p>
+                                    <p><b>Subkategória:</b>
+                                        <%= data.subcategory %>
+                                    </p>
+                                    <p><b>Počet položiek:</b>
+                                        <%= data.itemsCount %>
+                                    </p>
+                                    <p><b>Počet zmien:</b>
+                                        <%= data.offerChangesCount %>
+                                    </p>
+                                    <p><b>Počet predĺžení:</b>
+                                        <%= data.extensionsCount %>
+                                    </p>
+                                    <p><b>Krajina:</b>
+                                        <%= data.country%>
+                                    </p>
+                                    <p><b>Min. zníženie [%]:</b>
+                                        <%= data.percentageReductionMinStep %>
+                                    </p>
+                                    <p><b>Porovnanie úspory:</b>
+                                        <%= data.savingComparison %>
+                                    </p>
                                 </p>
                             </div>
                         </div>
@@ -209,15 +205,18 @@
                                 <li><a href="#tab1" class="active">
                                         <div class="icon-wrap"><i class="fas fa-2x fa-database"></i></div>
                                         Agregované dáta
-                                    </a></li>
+                                    </a>
+                                </li>
                                 <li><a href="#tab2" class="">
                                         <div class="icon-wrap"><i class="fas fa-2x fa-spinner"></i></div>
                                         Progres
-                                    </a></li>
+                                    </a>
+                                </li>
                                 <li><a href="#tab3" class="">
                                         <div class="icon-wrap"><i class="fas fa-2x fa-user-friends"></i></div>
                                         Účastníci
-                                    </a></li>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="tm-tab-contents">
@@ -226,38 +225,38 @@
                                     <div class="text-content">
                                         <h3 class="tm-service-tab-title">Agregované dáta</h3>
                                         <%=lst=[]%>
-                                            <%=lst1=[]%>
-                                                <% offers.forEach(function(data){ %>
-                                                    <%lst.push(data.newValue)%>
-                                                        <%lst1.push(data.newValue)%>
-                                                            <% }); %>
-                                                                <canvas id="myChart" width="400" height="200"></canvas>
-                                                                <script>
-                                                                    var aa = "<%=lst%>"
-                                                                    aa = aa.slice(1, -1)
-                                                                    aa = aa.split(",")
-                                                                    for (var i = 0; i < aa.length; i++) {
-                                                                        aa[i] = Number(aa[i])
-                                                                    }
-                                                                    var entryDate = []
-                                                                    for (var i = 0; i < aa.length; i++) {
-                                                                        entryDate[i] = i
-                                                                    }
-                                                                    const ctx = document.getElementById('myChart').getContext('2d');
-                                                                    const myChart = new Chart(ctx, {
-                                                                        type: 'line',
-                                                                        data: {
-                                                                            labels: entryDate,
-                                                                            datasets: [{
-                                                                                label: 'cena',
-                                                                                data: aa,
-                                                                                fill: false,
-                                                                                borderColor: 'rgb(75, 192, 192)',
-                                                                                tension: 0.1
-                                                                            }]
-                                                                        }
-                                                                    });
-                                                                </script>
+                                        <%=lst1=[]%>
+                                        <% offers.forEach(function(data){ %>
+                                            <%lst.push(data.newValue)%>
+                                            <%lst1.push(data.newValue)%>
+                                        <%});%>
+                                        <canvas id="myChart" width="400" height="200"></canvas>
+                                        <script>
+                                            var aa = "<%=lst%>"
+                                            aa = aa.slice(1, -1)
+                                            aa = aa.split(",")
+                                            for (var i = 0; i < aa.length; i++) {
+                                                aa[i] = Number(aa[i])
+                                            }
+                                            var entryDate = []
+                                            for (var i = 0; i < aa.length; i++) {
+                                                entryDate[i] = i
+                                            }
+                                            const ctx = document.getElementById('myChart').getContext('2d');
+                                            const myChart = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: entryDate,
+                                                    datasets: [{
+                                                        label: 'cena',
+                                                        data: aa,
+                                                        fill: false,
+                                                        borderColor: 'rgb(75, 192, 192)',
+                                                        tension: 0.1
+                                                    }]
+                                                }
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                                 <div id="tab2">
@@ -296,82 +295,79 @@
                                     </div>
                                 </div>
                                 <% var particip=[] %>
-                                    <% for(var i=0;i < offers.length ;i++) { %>
-                                        <% particip.push(offers[i].participant) %>
-                                            <% }%>
-                                                <% var uni_p=[... new Set(particip)] %>
-                                                    <%- include('../partials/functions.ejs'); %>
-                                                        <% arrr=get_data(offers) %>
-                                                            <% for(var i=0;i < uni_p.length;i++){%>
-                                                                <%(arrr[uni_p[i]])%>
-                                                                    <%}%>
-                                                                        <div id="tab3">
-                                                                            <div class="text-content">
-                                                                                <h3 class="tm-service-tab-title">
-                                                                                    Účastníci</h3>
-                                                                                <canvas id="myChart2" width="400"
-                                                                                    height="200"></canvas>
-                                                                                <script>
-                                                                                    //particip to arr
-                                                                                    var aa = "<%=uni_p%>"
-                                                                                    aa = aa.slice(1, -1)
-                                                                                    aa = aa.split(",")
-                                                                                    for (var i = 0; i < aa.length; i++) {
-                                                                                        aa[i] = Number(aa[i])
-                                                                                    }
-                                                                                    //get longest number of bud by particip
-                                                                                    var entryDate = []
-                                                                                    "<% for(var i=0;i < uni_p.length;i++){%>"
-                                                                                    var arr = "<%=(arrr[uni_p[i]])%>"
-                                                                                    arr = arr.slice(1, -1)
-                                                                                    arr = arr.split(",")
-                                                                                    for (var i = 0; i < arr.length; i++) {
-                                                                                        arr[i] = Number(arr[i])
-                                                                                    }
-                                                                                    entryDate.push(arr.length - 1)
-                                                                                    " <%}%>"
+                                <% for(var i=0;i < offers.length ;i++) { %>
+                                    <% particip.push(offers[i].participant) %>
+                                <%}%>
+                                <% var uni_p=[... new Set(particip)] %>
+                                <%- include('../partials/functions.ejs'); %>
+                                <% arrr=get_data(offers) %>
+                                <% for(var i=0;i < uni_p.length;i++){%>
+                                    <%(arrr[uni_p[i]])%>
+                                <%}%>
+                                <div id="tab3">
+                                    <div class="text-content">
+                                        <h3 class="tm-service-tab-title">Účastníci</h3>
+                                        <canvas id="myChart2" width="400" height="200"></canvas>
+                                        <script>
+                                            //particip to arr
+                                            var aa = "<%=uni_p%>"
+                                            aa = aa.slice(1, -1)
+                                            aa = aa.split(",")
+                                            for (var i = 0; i < aa.length; i++) {
+                                                aa[i] = Number(aa[i])
+                                            }
+                                            //get longest number of bud by particip
+                                            var entryDate = []
+                                            "<% for(var i=0;i < uni_p.length;i++){%>"
+                                                var arr = "<%=(arrr[uni_p[i]])%>"
+                                                arr = arr.slice(1, -1)
+                                                arr = arr.split(",")
+                                                for (var i = 0; i < arr.length; i++) {
+                                                    arr[i] = Number(arr[i])
+                                                }
+                                                entryDate.push(arr.length - 1)
+                                            "<%}%>"
 
-                                                                                    var abc = Math.max.apply(null, entryDate);
-                                                                                    var new_data = []
-                                                                                    for (var i = 0; i < abc; i++) {
-                                                                                        new_data[i] = i
-                                                                                    }
-
-                                                                                    //data by particip
-                                                                                    var yy = []
-                                                                                    var arr = "<%=arrr%>"
-                                                                                    "<% for(var i=0;i < uni_p.length;i++){%>"
-                                                                                    var arr = "<%=(arrr[uni_p[i]])%>"
-                                                                                    var data = {
-                                                                                        fill: false,
-                                                                                        borderColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
-                                                                                        tension: 0.1
-                                                                                    }
-                                                                                    arr = arr.slice(1, -1)
-                                                                                    arr = arr.split(",")
-                                                                                    for (var i = 0; i < arr.length; i++) {
-                                                                                        arr[i] = Number(arr[i])
-                                                                                    }
-                                                                                    arr.sort(function (a, b) {
-                                                                                        return a - b;
-                                                                                    });
-                                                                                    data.label = "<%=uni_p[i]%>"
-                                                                                    data.data = arr
-                                                                                    yy.push(data)
-                                                                                    data = {}
-                                                                                    " <%}%>"
-
-                                                                                    const ctx2 = document.getElementById('myChart2').getContext('2d');
-                                                                                    const myChart2 = new Chart(ctx2, {
-                                                                                        type: 'line',
-                                                                                        data: {
-                                                                                            labels: new_data,
-                                                                                            datasets: yy
-                                                                                        }
-                                                                                    });
-                                                                                </script>
-                                                                            </div>
-                                                                        </div>
+                                            var abc = Math.max.apply(null, entryDate);
+                                            var new_data = []
+                                            for (var i = 0; i < abc; i++) {
+                                                new_data[i] = i
+                                            }
+                                            //data by particip
+                                            var yy = []
+                                            var arr = "<%=arrr%>"
+                                            "<% for(var i=0;i < uni_p.length;i++){%>"
+                                                var arr = "<%=(arrr[uni_p[i]])%>"
+                                                var data = {
+                                                    fill: false,
+                                                    borderColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                                                    tension: 0.1
+                                                }
+                                                arr = arr.slice(1, -1)
+                                                arr = arr.split(",")
+                                                for (var i = 0; i < arr.length; i++) {
+                                                    arr[i] = Number(arr[i])
+                                                }
+                                                arr.sort(function (a, b) {
+                                                    return a - b;
+                                                });
+                                                data.label = "<%=uni_p[i]%>"
+                                                data.data = arr
+                                                yy.push(data)
+                                                data = {}
+                                            "<%}%>"
+                                            
+                                            const ctx2 = document.getElementById('myChart2').getContext('2d');
+                                            const myChart2 = new Chart(ctx2, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: new_data,
+                                                    datasets: yy
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
