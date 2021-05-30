@@ -26,9 +26,4 @@
 6. ine:
     - dropdown button na aukcie v menu upravit dizajn
 ---
-7. deployment (David + Tono):
-    -  Cez Docker
-        - Dockerfile
-        - upload docker image na docker hub
-        - azure/heroku/ine spustit cez to ten docker image 
-    -  ALEBO iny spobob  
+7. deployment (David + Tono)
