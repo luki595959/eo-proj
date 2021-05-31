@@ -23,10 +23,7 @@
     - HOTOVO
 5. kategorie:
     - HOTOVO
----
 6. ine:
     - dropdown button na aukcie v menu upravit dizajn
     - /stats ->pridat nejaky popis
-    - 
----
 7. deployment (David + Tono)
