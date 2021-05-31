@@ -17,11 +17,11 @@
     - INAK HOTOVO
 2. statistky:
     - HOTOVO
-3. organizations:
+3. oragnizacie:
    - HOTOVO
-4. participants:
+4. ucastnici:
     - HOTOVO
-5. categories:
+5. kategorie:
     - HOTOVO
 ---
 6. ine:
