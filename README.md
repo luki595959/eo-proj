@@ -13,8 +13,7 @@
 
 # 2. To do:
 1. aukcie:
-    - /auctions/new -> popis + upavit tabulku (nazvy stplcov a celkovo dizajn)
-    - INAK HOTOVO
+    - HOTOVO
 2. statistky:
     - HOTOVO
 3. oragnizacie:
@@ -24,6 +23,5 @@
 5. kategorie:
     - HOTOVO
 6. ine:
-    - dropdown button na aukcie v menu upravit dizajn
-    - /stats ->pridat nejaky popis
+    - HOTOVO
 7. deployment (David + Tono)
