@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aukcie - Najnovšie</title>
-    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <link rel="icon"
+        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -28,8 +29,9 @@
                 </div>
                 <style>
                     .dropbtn {
-                        background-color: none;
+                        background-color: transparent;
                         border: none;
+                        color: #666768;
                     }
 
                     .dropdown {
@@ -59,6 +61,18 @@
 
                     .dropdown:hover .dropdown-content {
                         display: block;
+                    }
+
+                    th,
+                    td {
+                        text-align: center;
+                        border-bottom: 3px solid #ddd;
+                        padding-right: 40px;
+                        padding-left: 40px;
+                    }
+
+                    tr:hover {
+                        background-color: #f3f0f0;
                     }
                 </style>
                 <div class="col-lg-8 col-1">
@@ -111,8 +125,8 @@
                 <div class="col-12">
                     <div class="tm-bg-black-transparent text-center tm-services-header">
                         <h2 class="text-uppercase tm-services-page-title">Prehľad posledných 15 aukcií</h2>
-                            <p class="tm-services-description mb-0 small">
-                            Popis
+                        <p class="tm-services-description mb-0 small">
+
                         </p>
                     </div>
                 </div>
@@ -120,59 +134,106 @@
                     <div class="tm-bg-white-transparent tm-services-detail-box">
                         <table class="table-responsive">
                             <tr>
-                                <th title="ID">ID</th>
-                                <th title="organization">organization</th>
-                                <th title="auctionStart">auctionStart</th>
-                                <th title="auctionEnd">auctionEnd</th>
-                                <th title="auctionName">auctionName</th>
-                                <th title="auctionVal">auctionVal</th>
-                                <th title="comparativePrice">comparativePrice</th>
-                                <th title="winnerOffer">winnerOffer</th>
-                                <th title="currency">currency</th>
-                                <th title="invitationsCount">invitationsCount</th>
-                                <th title="activeParticipantsCount">activeParticipantsCount</th>
-                                <th title="winner">winner</th>
-                                <th title="auctionType">auctionType</th>
-                                <th title="category">category</th>
-                                <th title="subcategory">subcategory</th>
-                                <th title="itemsCount">itemsCount</th>
-                                <th title="offerChangesCount">offerChangesCount</th>
-                                <th title="extensionsCount">extensionsCount</th>
-                                <th title="country">country</th>
-                                <th title="percentageReductionMinStep">percentageReductionMinStep</th>
-                                <th title="savingComparison">savingComparison</th>
+                                <th>ID</th>
+                                <th>Organizácia</th>
+                                <th>Začiatok aukcie</th>
+                                <th>Koniec aukcie</th>
+                                <th>Názov aukcie</th>
+                                <th>Vyhodnotenie</th>
+                                <th>Porovnávacia cena</th>
+                                <th>Víťazná ponuka</th>
+                                <th>Mena</th>
+                                <th>Počet pozvaných</th>
+                                <th>Počet aktívnych účastníkov</th>
+                                <th>Víťaz</th>
+                                <th>Typ aukcie</th>
+                                <th>Kategória</th>
+                                <th>Podkategória</th>
+                                <th>Počet položiek</th>
+                                <th>Počet zmien ponuky</th>
+                                <th>Počet predĺžení</th>
+                                <th>Krajina</th>
+                                <th>Percento redukčných krokov</th>
+                                <th>Porovnanie úspory</th>
                             </tr>
                             <% data.forEach(function(data){ %>
                                 <tr>
                                     <td title="ID">
-                                        <a href="/auctions/<%=data.auctionUniqueId%>"><%=data.auctionUniqueId%></a>
+                                        <a href="/auctions/<%=data.auctionUniqueId%>">
+                                            <%=data.auctionUniqueId%>
+                                        </a>
                                     </td>
-                                    <td title="organization"><%=data.organization%></td>
-                                    <td title="auctionStart"><%=data.auctionStart%></td>
-                                    <td title="auctionEnd"><%=data.auctionEnd%></td>
-                                    <td title="auctionName"><%=data.auctionName%></td>
-                                    <td title="auctionVal"><%=data.auctionVal%></td>
-                                    <td title="comparativePrice"><%=data.comparativePrice%></td>
-                                    <td title="winnerOffer"><%=data.winnerOffer%></td>
-                                    <td title="currency"><%=data.currency%></td>
-                                    <td title="invitationsCount"><%=data.invitationsCount%></td>
-                                    <td title="activeParticipantsCount"><%=data.activeParticipantsCount%></td>
-                                    <td title="winner"><%=data.winner%></td>
-                                    <td title="auctionType"><%=data.auctionType%></td>
-                                    <td title="category"><%=data.category%></td>
-                                    <td title="subcategory"><%=data.subcategory%></td>
-                                    <td title="itemsCount"><%=data.itemsCount%></td>
-                                    <td title="offerChangesCount"><%=data.offerChangesCount%></td>
-                                    <td title="extensionsCount"><%=data.extensionsCount%></td>
-                                    <td title="country"><%=data.country%></td>
-                                    <td title="percentageReductionMinStep"><%=data.percentageReductionMinStep%></td>
-                                    <td title="savingComparison"><%=data.savingComparison%></td>
+
+                                    <td title="Organizácia">
+                                        <%=data.organization%>
+                                    </td>
+                                    <td title="Začiatok aukcie">
+                                        <% var d1=new Date(+data.auctionStart);%>
+                                            <%d2=d1.toString()%>
+                                                <%=d2.slice(4, 21)%>
+                                    </td>
+                                    <td title="Koniec aukcie">
+                                        <% var d1=new Date(+data.auctionEnd);%>
+                                            <%d2=d1.toString()%>
+                                                <%=d2.slice(4, 21)%>
+                                    </td>
+                                    <td title="Názov aukcie">
+                                        <%=data.auctionName%>
+                                    </td>
+                                    <td title="Vyhodnotenie">
+                                        <%=data.auctionVal%>
+                                    </td>
+                                    <td title="Porovnávacia cena">
+                                        <%=data.comparativePrice%>
+                                    </td>
+                                    <td title="Víťazná ponuka">
+                                        <%=data.winnerOffer%>
+                                    </td>
+                                    <td title="Mena">
+                                        <%=data.currency%>
+                                    </td>
+                                    <td title="Počet pozvaných">
+                                        <%=data.invitationsCount%>
+                                    </td>
+                                    <td title="Počet aktívnych účastníkov">
+                                        <%=data.activeParticipantsCount%>
+                                    </td>
+                                    <td title=Víťaz">
+                                        <%=data.winner%>
+                                    </td>
+                                    <td title="Typ aukcie">
+                                        <%=data.auctionType%>
+                                    </td>
+                                    <td title="Kategória">
+                                        <%=data.category%>
+                                    </td>
+                                    <td title="Podkategória">
+                                        <%=data.subcategory%>
+                                    </td>
+                                    <td title="Počet položiek">
+                                        <%=data.itemsCount%>
+                                    </td>
+                                    <td title="Počet zmien ponuky">
+                                        <%=data.offerChangesCount%>
+                                    </td>
+                                    <td title="Počet predĺžení">
+                                        <%=data.extensionsCount%>
+                                    </td>
+                                    <td title="Krajina">
+                                        <%=data.country%>
+                                    </td>
+                                    <td title="Percento redukčných krokov">
+                                        <%=data.percentageReductionMinStep%>
+                                    </td>
+                                    <td title="Porovnanie úspory">
+                                        <%=data.savingComparison%>
+                                    </td>
                                 </tr>
-                            <%});%>
+                                <%});%>
                         </table>
                     </div>
                 </div>
-            </div>
+        </div>
         </section>
         <%- include('../partials/footer.ejs'); %>
     </div>

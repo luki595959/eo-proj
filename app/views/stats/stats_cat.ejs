@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <link rel="icon"
+        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <title>Aukcie - Štatistiky</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
@@ -28,8 +29,9 @@
                 </div>
                 <style>
                     .dropbtn {
-                        background-color: none;
+                        background-color: transparent;
                         border: none;
+                        color: #666768;
                     }
 
                     .dropdown {
@@ -112,13 +114,14 @@
                     <div class="col-4"></div>
                     <div class="col-8">
                         <label class="tm-tab-links " for="id_au" style="color: white;">Výber kategórie:</label>
-                        <select style="color: black;" name="id_au" class="form-control" onchange="location = this.value;">
+                        <select style="color: black;" name="id_au" class="form-control"
+                            onchange="location = this.value;">
                             <option value="">Kategória</option>
                             <% ll.forEach(function(data){ %>
                                 <option value="/stats/category/<%=data.category%>">
                                     <%=data.category%>
                                 </option>
-                            <%});%>
+                                <%});%>
                         </select>
                     </div>
                     <div class="col-12">
@@ -140,8 +143,11 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Počet aukcií</h3>
-                                <p class="tm-app-feature-description">Celkový počet uskutočnených aukcií v danej kategórii:</p>
-                                <h4><b><%=data[0].auctions%></b></h4>
+                                <p class="tm-app-feature-description">Celkový počet uskutočnených aukcií v danej
+                                    kategórii:</p>
+                                <h4><b>
+                                        <%=data[0].auctions%>
+                                    </b></h4>
                             </div>
                         </div>
                     </div>
@@ -152,8 +158,11 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Počet oragnizácií</h3>
-                                <p class="tm-app-feature-description">Celkový počet organizácií v dátach pre danú kategóriu:</p>
-                                <h4><b><%=data[0].organizations%></b></h4>
+                                <p class="tm-app-feature-description">Celkový počet organizácií v dátach pre danú
+                                    kategóriu:</p>
+                                <h4><b>
+                                        <%=data[0].organizations%>
+                                    </b></h4>
                             </div>
                         </div>
                     </div>
@@ -164,8 +173,11 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Úspory</h3>
-                                <p class="tm-app-feature-description">Priemerné úspory vypočítané na základe údajov z dát pre danú kategóriu:</p>
-                                <h4><b><%=Math.round(data[1].avgSavings *1000) / 1000%> €</b></h4>
+                                <p class="tm-app-feature-description">Priemerné úspory vypočítané na základe údajov z
+                                    dát pre danú kategóriu:</p>
+                                <h4><b>
+                                        <%=Math.round(data[1].avgSavings *1000) / 1000%> €
+                                    </b></h4>
                             </div>
                         </div>
                     </div>
@@ -176,16 +188,19 @@
                             </div>
                             <div class="tm-app-feature-description-box">
                                 <h3 class="mb-4 tm-app-feature-title">Účastníci</h3>
-                                <p class="tm-app-feature-description">Celkový počet dodávateľov zúčastnených na aukciách v danej kategórii:</p>
-                                <h4><b><%=data[2].participants%></b></h4>
+                                <p class="tm-app-feature-description">Celkový počet dodávateľov zúčastnených na aukciách
+                                    v danej kategórii:</p>
+                                <h4><b>
+                                        <%=data[2].participants%>
+                                    </b></h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <footer class="col-12 tm-about-header">
                     <h2 class="text-uppercase text-center text-white tm-about-page-title">
-                        <a href="/stats/subcategory/Zdravotnický materiál"> Zobraziť štatistiky pre subkategórie</a>
-                        </h2>
+                        <a href="/stats/subcategory/Zdravotnický materiál"> Zobraziť štatistiky pre podkategórie</a>
+                    </h2>
                 </footer>
             </section>
             <%- include('../partials/footer.ejs'); %>

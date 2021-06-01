@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aukcie - Kategória: <%=category.category%></title>
-    <link rel="icon"href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <title>Aukcie - Kategória: <%=category.category%>
+    </title>
+    <link rel="icon"
+        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -30,8 +32,9 @@
                 </div>
                 <style>
                     .dropbtn {
-                        background-color: none;
+                        background-color: transparent;
                         border: none;
+                        color: #666768;
                     }
 
                     .dropdown {
@@ -112,10 +115,14 @@
             <section class="row" id="tmServices">
                 <div class="col-12">
                     <div class="tm-bg-black-transparent text-center tm-services-header tm-testimonials-header">
-                        <h2 class="text-uppercase tm-services-page-title tm-testimonials-page-title">Subkategórie: <%=category.category%></h2>
+                        <h2 class="text-uppercase tm-services-page-title tm-testimonials-page-title">Podkategórie:
+                            <%=category.category%>
+                        </h2>
                         <% data.forEach(function(data){ %>
-                            <p class="tm-services-description mb-0 small"><%=data%></p>
-                        <%});%>
+                            <p class="tm-services-description mb-0 small">
+                                <%=data%>
+                            </p>
+                            <%});%>
                     </div>
                 </div>
             </section>
@@ -133,7 +140,7 @@
             $('.tabs a').click(function (e) {
                 e.preventDefault();
                 var $this = $(this),
-                tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+                    tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
                     others = $this.closest('li').siblings().children('a'),
                     target = $this.attr('href');
                 others.removeClass('active');

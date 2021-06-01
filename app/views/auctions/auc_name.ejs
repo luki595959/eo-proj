@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/templatemo-style.css" />
-    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <link rel="icon"
+        href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -33,8 +34,9 @@
                 </div>
                 <style>
                     .dropbtn {
-                        background-color: none;
+                        background-color: transparent;
                         border: none;
+                        color: #666768;
                     }
 
                     .dropdown {
@@ -115,13 +117,14 @@
                     <div class="col-4"></div>
                     <div class="col-8">
                         <label class="tm-tab-links " for="id_au" style="color: white;">Výber aukcie:</label>
-                        <select style="color: black;" name="id_au" class="form-control" onchange="location = this.value;">
+                        <select style="color: black;" name="id_au" class="form-control"
+                            onchange="location = this.value;">
                             <option value="">Názov</option>
                             <% ll.forEach(function(data){ %>
                                 <option value="/auctions/q/<%=data.auctionName%>">
                                     <%=data.auctionName%>
                                 </option>
-                            <%});%>
+                                <%});%>
                         </select>
                     </div>
                     <%data.forEach(function(dat){ %>
@@ -129,81 +132,84 @@
                             <div class="parallax-window tm-services-parallax-header" data-parallax="scroll"
                                 data-z-index="101" data-image-src="">
                                 <div class="tm-bg-black-transparent text-center tm-services-header">
-                                    <h2 class="text-uppercase tm-services-page-title">Auckia: <%=dat.auctionName%></h2>
+                                    <h2 class="text-uppercase tm-services-page-title">Auckia: <%=dat.auctionName%>
+                                    </h2>
                                     <p class="tm-services-description mb-0 small">
-                                        <p><b>ID aukcie: </b>
-                                            <a href="/auctions/<%= dat.auctionUniqueId %>"><%= dat.auctionUniqueId %></a>
-                                        </p>
-                                        <p><b>Organizácia:</b>
-                                            <%= dat.organization %>
-                                        </p>
-                                        <p><b>Začiatok aukcie:</b>
-                                            <% var d1=new Date(+dat.auctionStart);%>
+                                    <p><b>ID aukcie: </b>
+                                        <a href="/auctions/<%= dat.auctionUniqueId %>">
+                                            <%= dat.auctionUniqueId %>
+                                        </a>
+                                    </p>
+                                    <p><b>Organizácia:</b>
+                                        <%= dat.organization %>
+                                    </p>
+                                    <p><b>Začiatok aukcie:</b>
+                                        <% var d1=new Date(+dat.auctionStart);%>
                                             <%=d1%>
-                                        </p>
-                                        <p><b>Koniec aukcie:</b>
-                                            <% var d2=new Date(+dat.auctionEnd);%>
+                                    </p>
+                                    <p><b>Koniec aukcie:</b>
+                                        <% var d2=new Date(+dat.auctionEnd);%>
                                             <%=d2%>
-                                        </p>
-                                        <p><b>Vyhodnotenie:</b>
-                                            <%= dat.auctionVal %>
-                                        </p>
-                                        <p><b>Porovnávacia cena:</b>
-                                            <%= dat.comparativePrice %>
-                                        </p>
-                                        <p><b>Víťazná ponuka:</b>
-                                            <%= dat.winnerOffer %>
-                                        </p>
-                                        <p><b>Mena:</b>
-                                            <%= dat.currency %>
-                                        </p>
-                                        <p><b>Počet pozvánok</b>
-                                            <%= dat.invitationsCount %>
-                                        </p>
-                                        <p><b>Počet registrovaných účastníkov:</b>
-                                            <%= data.registeredParticipantsCount %>
-                                        </p>
-                                        <p><b>Počet zúčastnených účastníkov:</b>
-                                            <%= dat.activeParticipantsCount %>
-                                        </p>
-                                        <p><b>Víťaz:</b>
-                                            <%= dat.winner %>
-                                        </p>
-                                        <p><b>Typ aukcie:</b>
-                                            <%= dat.auctionType %>
-                                        </p>
-                                        <p><b>Kategória:</b>
-                                            <%= dat.category %>
-                                        </p>
-                                        <p><b>Subkategória:</b>
-                                            <%= dat.subcategory %>
-                                        </p>
-                                        <p><b>Počet položiek:</b>
-                                            <%= dat.itemsCount %>
-                                        </p>
-                                        <p><b>Počet zmien:</b>
-                                            <%= dat.offerChangesCount %>
-                                        </p>
-                                        <p><b>Počet predĺžení aukcie:</b>
-                                            <%= dat.extensionsCount %>
-                                        </p>
-                                        <p><b>Krajina:</b>
-                                            <%= dat.country%>
-                                        </p>
-                                        <p><b>Min. zníženie [%]:</b>
-                                            <%= dat.percentageReductionMinStep %>
-                                        </p>
-                                        <p><b>Porovnanie úspory:</b>
-                                            <%= dat.savingComparison %>
-                                        </p>
+                                    </p>
+                                    <p><b>Vyhodnotenie:</b>
+                                        <%= dat.auctionVal %>
+                                    </p>
+                                    <p><b>Porovnávacia cena:</b>
+                                        <%= dat.comparativePrice %>
+                                    </p>
+                                    <p><b>Víťazná ponuka:</b>
+                                        <%= dat.winnerOffer %>
+                                    </p>
+                                    <p><b>Mena:</b>
+                                        <%= dat.currency %>
+                                    </p>
+                                    <p><b>Počet pozvánok</b>
+                                        <%= dat.invitationsCount %>
+                                    </p>
+                                    <p><b>Počet registrovaných účastníkov:</b>
+                                        <%= data.registeredParticipantsCount %>
+                                    </p>
+                                    <p><b>Počet zúčastnených účastníkov:</b>
+                                        <%= dat.activeParticipantsCount %>
+                                    </p>
+                                    <p><b>Víťaz:</b>
+                                        <%= dat.winner %>
+                                    </p>
+                                    <p><b>Typ aukcie:</b>
+                                        <%= dat.auctionType %>
+                                    </p>
+                                    <p><b>Kategória:</b>
+                                        <%= dat.category %>
+                                    </p>
+                                    <p><b>Podkategória:</b>
+                                        <%= dat.subcategory %>
+                                    </p>
+                                    <p><b>Počet položiek:</b>
+                                        <%= dat.itemsCount %>
+                                    </p>
+                                    <p><b>Počet zmien:</b>
+                                        <%= dat.offerChangesCount %>
+                                    </p>
+                                    <p><b>Počet predĺžení aukcie:</b>
+                                        <%= dat.extensionsCount %>
+                                    </p>
+                                    <p><b>Krajina:</b>
+                                        <%= dat.country%>
+                                    </p>
+                                    <p><b>Min. zníženie [%]:</b>
+                                        <%= dat.percentageReductionMinStep %>
+                                    </p>
+                                    <p><b>Porovnanie úspory:</b>
+                                        <%= dat.savingComparison %>
+                                    </p>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                    <%})%>
-                    <div class="col-12 tm-tabs-container">
-                        <div class="tm-tab-links"></div>
-                    </div>
+                        <%})%>
+                            <div class="col-12 tm-tabs-container">
+                                <div class="tm-tab-links"></div>
+                            </div>
                 </section>
             </div>
             <%- include('../partials/footer.ejs'); %>
