@@ -10,6 +10,8 @@
        npm start
        ```
  - apka bezi na *127.0.0.1:8080* alebo *localhost:8080* 
+ - deploynuta apka
+   - https://eo-proj.herokuapp.com/
 
 # 2. To do:
 1. aukcie:
@@ -26,4 +28,3 @@
     - HOTOVO
 7. deployment - Lukas
    - HOTOVO 
-   - https://eo-proj.herokuapp.com/
