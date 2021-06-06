@@ -1,6 +1,6 @@
 # 1. Spustenie:
- - rozbalit db.zip (pre priglupavych v db.zip je subor db.sqlite a ten treba dat tam, kde je subor db.zip)
- - /data/csv/ je zipko s csv datami aj to rozbalit (pre priglupavych v offer.zip su 2 csv subory, ktore treba dat tam, kde je subor offer.zip)
+ - rozbalit eo_app/db.zip (pre priglupavych v db.zip je subor db.sqlite a ten treba dat tam, kde je subor db.zip)
+ - eo_app/data/csv/ je zipko s csv datami aj to rozbalit (pre priglupavych v offer.zip su 2 csv subory, ktore treba dat tam, kde je subor offer.zip)
  - instalacia kniznic:
 &nbsp; ```
        npm i
@@ -24,4 +24,6 @@
     - HOTOVO
 6. ine:
     - HOTOVO
-7. deployment (David + Tono)
+7. deployment - Lukas
+   - HOTOVO 
+   - https://eo-proj.herokuapp.com/
