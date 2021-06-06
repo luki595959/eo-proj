@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/stock-chart_1f5e0.png">
+    <title>Aukcie - Štatistiky</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/templatemo-style.css" />
+</head>
+
+<body id="aboutPage">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/img/bg-01.jpg">
+        <div class="container-fluid">
+            <div class="row tm-brand-row">
+                <div class="col-lg-4 col-11">
+                    <div class="tm-brand-container tm-bg-white-transparent">
+                        <i class="fas fa-2x fa-gavel tm-brand-icon"></i>
+                        <div class="tm-brand-texts">
+                            <h1 class="text-uppercase tm-brand-name">Auction APP</h1>
+                            <p class="small">Aplikácia na vizualizáciu aukcií</p>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .dropbtn {
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        color: #666768;
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        display: inline-block;
+                        background-color: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f1f1f1;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                    }
+
+                    .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    .dropdown-content a:hover {
+                        background-color: #ddd;
+                    }
+
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
+                </style>
+                <div class="col-lg-8 col-1">
+                    <div class="tm-nav">
+                        <nav class="navbar navbar-expand-lg navbar-light tm-bg-white-transparent tm-navbar">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item ">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <a class="nav-link" href="/">Domov <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <a class="nav-link" href="/stats">Štatistiky</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <a class="nav-link" href="/categories">Kategórie</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <a class="nav-link" href="/organizations/100">Organizácie</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <a class="nav-link" href="/participants/654">Účastníci</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="tm-nav-link-highlight"></div>
+                                        <div class="dropdown  nav-link">
+                                            <button class="dropbtn">Aukcie</button>
+                                            <div class="dropdown-content">
+                                                <a href="/auctions/new">Posledných 15</a>
+                                                <a href="/auctions/27-9-269">Podľa ID</a>
+                                                <a href="/auctions/q/Papírové hrany">Podľa názvu</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <section id="tmAppFeatures">
+                <div class="row">
+                    <header class="col-12 text-center text-white tm-bg-black-transparent p-5 tm-app-header">
+                        <h2 class="text-uppercase mb-3 tm-app-feature-header">Vybrané štatistiky o dátach</h2>
+                        <p class="mb-0 small" style="text-align:justify">Táto stránka je zameraná na vybrané štatistiky o dátach, ktoré je možné si prehliadnuť pri zvolení konkrétnych kategórii. Pri jednotlivých kategóriách sú zobrazené štyri základné štatistické údaje, a to celkový počet uskutočnených aukcií, celkový počet organizácií, priemerné úspory a celkový počet dodávateľov zúčastnených na aukciách.
+                            Kategórie sú rozdelené na základe oblastí zamerania aukcií.   </p>
+                    </header>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="tm-bg-white-transparent tm-app-feature-box">
+                            <div class="tm-app-feature-icon-container">
+                                <i class="fas fa-3x fa-layer-group tm-app-feature-icon"></i>
+                            </div>
+                            <div class="tm-app-feature-description-box">
+                                <h3 class="mb-4 tm-app-feature-title">Počet aukcií</h3>
+                                <p class="tm-app-feature-description">Celkový počet uskutočnených aukcií:</p>
+                                <h4><b><%=data[0].auctions%></b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tm-bg-white-transparent tm-app-feature-box">
+                            <div class="tm-app-feature-icon-container">
+                                <i class="fas fa-3x fa-sitemap tm-app-feature-icon"></i>
+                            </div>
+                            <div class="tm-app-feature-description-box">
+                                <h3 class="mb-4 tm-app-feature-title">Počet organizácií</h3>
+                                <p class="tm-app-feature-description">Celkový počet organizácií v dátach:</p>
+                                <h4><b><%=data[0].organizations%></b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tm-bg-white-transparent tm-app-feature-box">
+                            <div class="tm-app-feature-icon-container">
+                                <i class="fas fa-3x fa-money-bill-wave tm-app-feature-icon"></i>
+                            </div>
+                            <div class="tm-app-feature-description-box">
+                                <h3 class="mb-4 tm-app-feature-title">Úspory</h3>
+                                <p class="tm-app-feature-description">Priemerné úspory vypočítané na základe údajov z dát:</p>
+                                <h4><b><%=Math.round(data[1].avgSavings *1000) / 1000%> €</b></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tm-bg-white-transparent tm-app-feature-box">
+                            <div class="tm-app-feature-icon-container">
+                                <i class="fas fa-3x fa-users tm-app-feature-icon"></i>
+                            </div>
+                            <div class="tm-app-feature-description-box">
+                                <h3 class="mb-4 tm-app-feature-title">Účastníci</h3>
+                                <p class="tm-app-feature-description">Celkový počet dodávateľov zúčastnených na aukciách:</p>
+                                <h4><b><%=data[2].participants%></b></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row" id="tmAbout">
+                <header class="col-12 tm-about-header">
+                    <h2 class="text-uppercase text-center text-white tm-about-page-title">Kategórie</h2>
+                    <hr class="tm-about-title-hr">
+                </header>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 class="tm-about-name">Marketing, reklama a tisk</h3>
+                        <a href="/stats/category/Marketing, reklama a tisk" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="tm-about-name">Zdravotnictví &emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Zdravotnictví" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <h3 class="tm-about-name">Obaly &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Obaly" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="tm-about-name">Stavebnictví &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Stavebnictví" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="tm-about-name">Stroje, zařízení, nástroje, nářadí</h3>
+                        <a href="/stats/category/Stroje, zařízení, nástroje, nářadí" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3 class="tm-about-name">Hutní materiál, kovy a slitiny</h3>
+                        <a href="/stats/category/Hutní materiál, kovy a slitiny" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="tm-about-name">Počítače, IT a telekomunikační služby</h3>
+                        <a href="/stats/category/Počítače, IT a telekomunikační služby" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container">
+                             <i class="fas fa-truck-moving"></i>
+                        </div>
+                        <h3 class="tm-about-name">Dopravní služby, auto-moto a příslušenství</h3>
+                        <a href="/stats/category/Dopravní služby, auto-moto a příslušenství" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-trash-restore"></i>
+                        </div>
+                        <h3 class="tm-about-name">Odpadové hospodářství &emsp;&emsp;&emsp;&emsp;</h3>
+                        <a href="/stats/category/Odpadové hospodářství"class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3 class="tm-about-name">Úklid, úklidové služby</h3>
+                        <a href="/stats/category/Úklid, úklidové služby" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="tm-about-name">Elektro, elektromateriál</h3>
+                        <a href="/stats/category/Elektro, elektromateriál" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="tm-about-name">Inženýrská činnost&emsp;&emsp;</h3>
+                        <a href="/stats/category/Inženýrská činnost" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="tm-about-name">Potraviny a nápoje </h3>
+                        <a href="/stats/category/Potraviny a nápoje" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container"> 
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="tm-about-name">Kancelář</h3>
+                        <a href="/stats/category/Kancelář" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tm-bg-black-transparent tm-about-box">
+                        <div class="tm-about-number-container">
+                             <i class="fas fa-flask"></i>
+                        </div>
+                        <h3 class="tm-about-name">Chemie</h3>
+                        <a href="/stats/category/Chemie" class="btn btn-tertiary tm-btn-app-feature">Viac info</a>
+                    </div>
+                </div>
+                <footer class="col-12 tm-about-header">
+                    <h2 class="text-uppercase text-center text-white tm-about-page-title">
+                        <a href="/stats/subcategory/Zdravotnický materiál"> Zobraziť štatistiky pre subkategórie</a>
+                    </h2>
+                </footer>
+            </section>
+            <%- include('../partials/footer.ejs'); %>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/parallax.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

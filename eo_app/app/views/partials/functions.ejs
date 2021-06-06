@@ -1,0 +1,24 @@
+<% 	
+	objectify=function (array) {
+ 		return array.reduce(function (p, c) {
+  		    p[c[0]]=c.slice(1); 
+  		    return p; 
+        }, {}); 
+    } 
+%>
+<%
+    get_data=function (arr) {
+        var b=[] 
+        for (var i=0; i < arr.length; i++) {
+            var arr1=[] 
+            arr1.push(arr[i].participant) 
+                for (var j=0; j < arr.length; j++) {
+                    if (arr[i].participant==arr[j].participant)
+                        arr1.push(arr[j].newValue) 
+            } 
+            b.push(arr1) 
+        }
+        var t=objectify(b) 
+        return t 
+    }
+%>
