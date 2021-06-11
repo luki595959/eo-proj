@@ -13,5 +13,5 @@
   ---
   Tento image je dostupny aj na dockerhube: https://hub.docker.com/r/luki595959/eo-proj
   1. stahnutie image-u: ```docker pull luki595959/eo-proj:latest```
-  2. sptustenie kontajnera:```docker run -p 8080:8080 --name eo-proj-apka luki595959/eo-proj:latest```
+  2. sptustenie kontajnera: ```docker run -p 8080:8080 --name eo-proj-apka luki595959/eo-proj:latest```
  ## Apka je dostupna online - https://eo-proj.herokuapp.com/ 
