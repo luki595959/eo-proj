@@ -1,16 +1,16 @@
 # Spustenie:
- - rozbalit eo_app/db.zip (pre priglupavych v db.zip je subor db.sqlite a ten treba dat tam, kde je subor db.zip)
- - eo_app/data/csv/ je zipko s csv datami aj to rozbalit (pre priglupavych v offer.zip su 2 csv subory, ktore treba dat tam, kde je subor offer.zip)
- - ```cd eo_app```
- - instalacia kniznic:
+ 1. rozbalit eo_app/db.zip (pre priglupavych v db.zip je subor db.sqlite a ten treba dat tam, kde je subor db.zip)
+ 2. eo_app/data/csv/ je zipko s csv datami aj to rozbalit (pre priglupavych v offer.zip su 2 csv subory, ktore treba dat tam, kde je subor offer.zip)
+ 3. ```cd eo_app```
+ 4. instalacia kniznic:
 &nbsp; ```
        npm i
        ```
- - spustenie apky:
+ 5. spustenie apky:
 &nbsp; ```
        npm start
        ```
- - apka bezi na *127.0.0.1:8080* alebo *localhost:8080* 
+ 6. apka bezi na *127.0.0.1:8080* alebo *localhost:8080* 
  - deploynuta apka - https://eo-proj.herokuapp.com/ 
 
 # To do:
