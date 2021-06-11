@@ -10,7 +10,7 @@
   2. eo_app/data/csv/ je zipko s csv datami aj to rozbalit (pre priglupavych v offer.zip su 2 csv subory, ktore treba dat tam, kde je subor offer.zip)
   3. vytvorenie docker image-u: ```docker build -t eo-proj .```
   4. spustenie kontajnera: ```docker run -p 8080:8080 --name eo-proj-apka eo-proj```
-  ---
+   ---
    Tento image je dostupny aj na dockerhube: https://hub.docker.com/r/luki595959/eo-proj
    1. stahnutie image-u: ```docker pull luki595959/eo-proj:latest```
    2. sptustenie kontajnera: ```docker run -p 8080:8080 --name eo-proj-apka luki595959/eo-proj:latest```
